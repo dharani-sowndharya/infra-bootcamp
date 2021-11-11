@@ -8,6 +8,7 @@ If not, this is the gist.
 
 In this repo, we have [Charmander evolving to Charizard](https://www.pokemon.com/us/pokedex/charmander)
 
+Get into the evolution directory for your practice session.
 ###Pre req:
 1. Install terraform cli recent version
 2. Execute the following command to create your own SSH key pair in local.
