@@ -2,6 +2,7 @@ variable "AWS_REGION" {
   default = "ap-south-1"
 }
 
+## Change the name and location of the key here ##
 variable "PATH_TO_PRIVATE_KEY" {
   default = "mykey"
 }

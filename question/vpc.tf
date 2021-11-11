@@ -5,6 +5,7 @@ resource "aws_vpc" "main" {
   enable_dns_support   = "true"
   enable_dns_hostnames = "true"
   enable_classiclink   = "false"
+  ### EMPC_CHECK: Append your name to the tags here ###
   tags = {
     Name = "main"
   }
