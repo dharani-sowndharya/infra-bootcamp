@@ -1,0 +1,7 @@
+terraform {
+  backend "s3" {
+    bucket = "Dharani-test-s3-bucket"
+    key    = "trainer-demo/"
+    region = "ap-south-1"
+  }
+}
