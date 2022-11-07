@@ -5,7 +5,6 @@ resource "aws_vpc" "main" {
   enable_dns_support   = "true"
   enable_dns_hostnames = "true"
   enable_classiclink   = "false"
-  ### EMPC_CHECK: Append your name to the tags here ###
   tags = {
     Name = "${MY_NAME}-evolution-main"
   }
@@ -79,7 +78,7 @@ resource "<subnet_resource>" "main-private-3" {
 }
 
 # Internet GW
-resource "aws_internet_gateway" "main-gw" {
+resource "aws_internet_gateway" "main-internet-gateway" {
   vpc_id = aws_vpc.main.id
 
   tags = {
@@ -92,7 +91,7 @@ resource "aws_route_table" "main-public" {
   vpc_id = aws_vpc.main.id
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.main-gw.id
+    gateway_id = aws_internet_gateway.main-internet-gateway.id
   }
 
   tags = {
