@@ -29,7 +29,7 @@ ssh-keygen #When prompted for a folder give a folder that you would not commit t
 
 Search for "EMPC_CHECK" in the question folder and fix the text within angular braces to evolve yourself.
 
-After fixing them run the following commands to create the stack. Make sure to change the names in the tags of the respective resources so that you do not get confused over each other's stack as they will all look identical. 
+After fixing them run the following commands to create the stack. The name that you give while doing terraform apply will be appended to all the tags. Make sure that the name is unique to you or your team to avoid confusions
 
 ```terraform
 terraform validate
