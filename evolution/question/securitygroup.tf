@@ -25,7 +25,7 @@ resource "aws_security_group" "myinstance" {
   }
 
   tags = {
-    Name = "myinstance"
+    Name = "${MY_NAME}-evolution-instance"
   }
 }
 
@@ -48,6 +48,6 @@ resource "aws_security_group" "elb-securitygroup" {
     cidr_blocks = [<What should be the IP here?>]
   }
   tags = {
-    Name = "elb"
+    Name = "${MY_NAME}-evolution-elb"
   }
 }

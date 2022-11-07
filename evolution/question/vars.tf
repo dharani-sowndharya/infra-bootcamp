@@ -1,5 +1,6 @@
+##########Level Charmander : EMPC_CHECK : Replace the resource names here with the right value##########
 variable "AWS_REGION" {
-  default = "ap-south-1"
+  default = "<region>"
 }
 
 ## Change the name and location of the key here ##
@@ -12,8 +13,13 @@ variable "PATH_TO_PUBLIC_KEY" {
 }
 
 variable "AMIS" {
+  ##########Level Charmander : EMPC_CHECK : Replace the resource names here with the right value##########
   type = map(string)
   default = {
-    ap-south-1 = "ami-041db4a969fe3eb68"
+    ap-south-1 = "<Identify the public AMI ID of the Free Amazon linux image of that region and enter here>"
   }
+}
+
+variable "MY_NAME" {
+  type = string
 }

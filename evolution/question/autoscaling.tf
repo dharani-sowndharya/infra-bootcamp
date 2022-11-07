@@ -25,7 +25,7 @@ resource "aws_autoscaling_group" "example-autoscaling" {
 
   tag {
     key                 = "Name"
-    value               = "Add relevant named tags here"
+    value               = "${MY_NAME}-evolution-asg"
     propagate_at_launch = true
   }
 }

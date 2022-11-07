@@ -7,7 +7,7 @@ resource "aws_vpc" "main" {
   enable_classiclink   = "false"
   ### EMPC_CHECK: Append your name to the tags here ###
   tags = {
-    Name = "main"
+    Name = "${MY_NAME}-evolution-main"
   }
 }
 
@@ -19,7 +19,7 @@ resource "<subnet_resource>" "main-public-1" {
   availability_zone       = "ap-south-1a"
 
   tags = {
-    Name = "main-public-1"
+    Name = "${MY_NAME}-evolution-main-public-1"
   }
 }
 
@@ -30,7 +30,7 @@ resource "<subnet_resource>" "main-public-2" {
   availability_zone       = "ap-south-1b"
 
   tags = {
-    Name = "main-public-2"
+    Name = "${MY_NAME}-evolution-main-public-2"
   }
 }
 
@@ -41,7 +41,7 @@ resource "<subnet_resource>" "main-public-3" {
   availability_zone       = "ap-south-1c"
 
   tags = {
-    Name = "main-public-3"
+    Name = "${MY_NAME}-evolution-main-public-3"
   }
 }
 
@@ -52,7 +52,7 @@ resource "<subnet_resource>" "main-private-1" {
   availability_zone       = "ap-south-1a"
 
   tags = {
-    Name = "main-private-1"
+    Name = "${MY_NAME}-evolution-main-private-1"
   }
 }
 
@@ -63,7 +63,7 @@ resource "<subnet_resource>" "main-private-2" {
   availability_zone       = "ap-south-1b"
 
   tags = {
-    Name = "main-private-2"
+    Name = "${MY_NAME}-evolution-main-private-2"
   }
 }
 
@@ -74,7 +74,7 @@ resource "<subnet_resource>" "main-private-3" {
   availability_zone       = "ap-south-1c"
 
   tags = {
-    Name = "main-private-3"
+    Name = "${MY_NAME}-evolution-main-private-3"
   }
 }
 
@@ -83,7 +83,7 @@ resource "aws_internet_gateway" "main-gw" {
   vpc_id = aws_vpc.main.id
 
   tags = {
-    Name = "main"
+    Name = "${MY_NAME}-evolution-main"
   }
 }
 
@@ -96,7 +96,7 @@ resource "aws_route_table" "main-public" {
   }
 
   tags = {
-    Name = "main-public-1"
+    Name = "${MY_NAME}-evolution-main-public-1"
   }
 }
 

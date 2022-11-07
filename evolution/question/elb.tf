@@ -21,6 +21,6 @@ resource "aws_elb" "my-elb" {
   connection_draining         = true
   connection_draining_timeout = 400
   tags = {
-    Name = "my-elb"
+    Name = "${MY_NAME}-evolution-elb"
   }
 }
